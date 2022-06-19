@@ -25,7 +25,7 @@ You can change the squares' status at any time you want.
 
 For more information on how simulation this works, you can read this selection below.
 
-![](https://github.com/zestra/Zestras-Game-of-Life/blob/main/game/How%20to%20Use%20This%20Book%20-%20Art%20of%20Problem%20Solving.pdf)
+![](https://github.com/zestra/Zestras-Game-of-Life/blob/main/game/6657DC98-DE39-4770-B1A8-EC979A815F27.jpeg)
 
 You can even make sure my code works by testing the official example in the doccument using my program.
 
