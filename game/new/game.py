@@ -41,7 +41,7 @@ def on_mouse_down(pos):
 
 
 def simulation():
-    global Map, old_map, index, simulate, buttons
+    global Map, old_map, index, buttons
 
     if simulate:
         index += 1
@@ -175,15 +175,6 @@ def simulation():
 
         Map = new_Map
 
-        if index >= random.choice([4, 3]):
-            if Map == old_map:
-                simulate = False
-            else:
-                old_map = Map
-                simulate = True
-
-            index = 0
-
         buttons = []
         for y in range(len(Map)):
             buttons.append([])
@@ -264,9 +255,13 @@ class Button2(Button):
             self.image = images.stop
             simulate = True
             create_map()
+            clock.schedule_interval(simulation, 0.1)
+
         else:
             self.image = images.play
             simulate = False
+            clock.unschedule(simulation)
+
         self.width = self.image.get_width()
         self.height = self.image.get_height()
         self.draw()
@@ -358,6 +353,6 @@ def show_text(text_to_show, rect, colour):
     screen.draw.textbox(text_to_show, rect, color=colour)
 
 
-clock.schedule_interval(simulation, 0.1)
+# clock.schedule_interval(simulation, 0.1)
 
 pgzrun.go()
