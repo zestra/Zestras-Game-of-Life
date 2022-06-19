@@ -1,6 +1,8 @@
 import pygame, pgzero, pgzrun
 import random
 
+from button import Button
+
 
 class Game:
     WIDTH = 1920  # window size
